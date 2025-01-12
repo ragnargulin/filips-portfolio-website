@@ -2,44 +2,154 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Filip Mellgren</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filip Mellgren - PhD Student in Economics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            text-align: center;
+            line-height: 1.6;
+            color: #333;
         }
         header {
-            background-color: #f4f4f4;
+            background: linear-gradient(45deg, #333, #555);
+            color: #fff;
             padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        nav {
+            background: #333;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1em;
         }
         main {
             padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        section h2 {
+            color: #333;
+            font-size: 1.8em;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            font-family: 'Lora', serif;
+        }
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
+            align-items: center;
+        }
+        .about-container img {
+            max-width: 200px;
+            border-radius: 50%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .research-card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 8px;
+            background: #f9f9f9;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
         }
         footer {
-            background-color: #f4f4f4;
-            padding: 10px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
+            background: #f4f4f4;
+            color: #555;
+            text-align: center;
+            padding: 10px 20px;
         }
-        a {
-            color: #000;
+        footer a {
+            color: #555;
             text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Filip Mellgren</h1>
+        <p>PhD Student in Economics, IIES Stockholm</p>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#research">Research</a>
+            <a href="#cv">CV</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
     <main>
-        <p>Hi! This site is under development and mostly empty.</p>
-        <p>I'm a PhD student in economics at the Institute for International Economic Studies (IIES) in Stockholm. I work on topics related to macroeconomics and productivity.</p>
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-container">
+                <img 
+                    src="assets/filipImage.jpg" 
+                    alt="Portrait of Filip Mellgren">
+                <p>
+                    I am a PhD student in economics at the Institute for International Economic Studies (IIES) in Stockholm. 
+                    My research focuses on macroeconomics and productivity, exploring the dynamics of economic growth and development.
+                    <br><br>
+                    My approach involves developing macroeconomic models that are motivated and disciplined by Swedish administrative employer-employee data. 
+                    I also have an affinity for coding and applying machine learning methods to economics and have done work on reinforcement learning-based pricing algorithms.
+                </p>
+            </div>
+        </section>
+        
+        <section id="research">
+            <h2>Research</h2>
+            <div class="research-card">
+                <h3>Macroeconomic Theory</h3>
+                <p>Research on theoretical models for economic growth and productivity.</p>
+            </div>
+            <div class="research-card">
+                <h3>Productivity Growth</h3>
+                <p>Analyzing the impact of technology diffusion on long-term economic growth.</p>
+            </div>
+        </section>
+        <section id="cv">
+            <h2>Curriculum Vitae (CV)</h2>
+            <p>A detailed version of my CV is available for download:</p>
+            <p><a href="CV_Filip_Mellgren.pdf" download>Download my CV (PDF)</a></p>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Feel free to get in touch with me via the following channels:</p>
+            <ul>
+                <li>Email: <a href="mailto:filip.mellgren@su.se">filip.mellgren@su.se</a></li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/filip-mellgren-a95116a1/" target="_blank">linkedin.com/in/filipmellgren</a></li>
+                <li>Twitter: <a href="https://twitter.com/filipmellgren" target="_blank">@filipmellgren</a></li>
+                <li>GitHub: <a href="https://github.com/filipmellgren" target="_blank">github.com/filipmellgren</a></li>
+            </ul>
+        </section>
     </main>
     <footer>
-        <p>Published with <a href="https://hugoblox.com">Hugo Blox Builder</a> — the free, <a href="https://github.com">open source</a> website builder that empowers creators.</p>
+        <p>&copy; <span id="currentYear"></span> Filip Mellgren</p>
+        <a href="https://twitter.com/filipmellgren" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://github.com/filipmellgren" target="_blank"><i class="fab fa-github"></i></a>
     </footer>
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>

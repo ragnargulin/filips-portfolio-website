@@ -1,0 +1,1 @@
+I assets kan du lägga in ditt CV som pdf och en bild på dig. Du kan sedan länka till dessa från din html-fil.
